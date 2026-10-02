@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+:root{
+    
+    --Blanco: #FFFF;
+    --Negro: #000;
+    --Darkcoffe: #392A16;
+    --Drysage: #D1CAA1;
+    --ToastedCaramel: #84592C;
+    --SpicedWine: #712E13;
+    --Vanilla: #E9C89F;
+    --Burgundy: #5F120C;
+    --Grey: #615F5E;
+    --Yellow:#F0EA00;
+
+
+
+    
+
+    --fuentePrincipal: "Caveat",sans-serif;
+    --tamañofuente: 4rem;
+    }
+
+    html{
+        font-size: 62.5%;
+        box-sizing: border-box;
+        scroll-snap-type: y mandatory;
+
+    }
+
+    *,*::before,*:after{
+        box-sizing: inherit;
+    }
+
+    body{
+        font-size: var(--tamañoFuente);
+        font-family: var(--fuentePrincipal);
+        font-weight: 400;
+       background-image: linear-gradient(to top, var(--Vanilla)0%,var(--ToastedCaramel)100%);
+    }
+
+    h1,h2,h3{
+        text-align: center;
+    }
+   
+    h2{
+        font-size: 2.8rem;
+    }
+
+    h3{
+        font-size: 2.8rem;
+    }
+
+    .sombra{
+   -webkit-box-shadow: 10px 17px 11px -4px #000000;
+    -moz-box-shadow: 10px 17px 11px -4px #000000;
+    -box-shadow: 10px 17px 11px -4px #000000;
+    border-radius: 2rem;
+    background-image: linear-gradient(to top, var(--Drysage) 0%, var(--Vanilla)70%);
+    padding: 2rem;
+   }
+   .titulo {
+    text-align: center;
+    font-size: var(--tamañoFuente);
+    font-size: 3.5rem;
+   }
+   
+   .titulo span{
+    font-size: 2rem;
+   }
+   
+   .subtitulo{
+    text-align: center;
+    font-size: 3.8rem;
+    color: var(--Darkcoffe);
+    padding-bottom: 10rem;
+    padding-top: 5rem;
+   }
+
+   .place{
+    font-weight: 600;
+    color: var(--Burgundy);
+   }
+
+   .boton{
+    background-color: var(--SpicedWine);
+    padding: 1rem 3rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    width: 80%;
+    text-align: center;
+    border: none;
+   }
+
+   .contenedor{
+    max-width: 120rem;
+    margin: 0 auto 0 auto;
+   }
+
+   .nav-bg{
+    background-color: var(--Yellow);
+   }
+   .navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   }
+
+   @media(min-width:480px){
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .boton{
+        width: auto;
+    }
+   }
+   .boton:hover{
+   cursor: pointer;
+    }
+
+    .navegacion-principal a{
+    padding: 1rem;
+    color: var(--ToastedCaramel);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 400;
+    }
+    .navegacion-principal a:hover{
+    background-color: var(--Burgundy);
+    color: var(--Drysage);
+    }
+     .Hero{
+    background-image: url(../img/Hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60rem;
+    position: relative;
+    margin-bottom: 2rem;
+    } 
+    
+    .contenido-Hero {
+
+   position: absolute;
+   background-color: rgb( 0 0 0 / 40% );
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+    }
+
+.carrusel-contenedor {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.titulo-carrusel {
+    color: var(--Darkcoffe);
+    margin-bottom: 1.5rem;
+}
+
+
+.carrusel-galeria {
+    display: flex;
+    overflow-x: auto;          
+    scroll-snap-type: x mandatory; 
+    gap: 20px;                 
+    padding-bottom: 15px;      
+    scrollbar-width: thin;
+}
+
+
+.carrusel-item {
+    flex: 0 0 100%;           
+    scroll-snap-align: center; 
+}
+
+.carrusel-item img {
+    width: 100%;
+    height: 400px;             
+    object-fit: cover;        
+    border-radius: 12px;       
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+    @media(min-width:780px){
+    .servicios{
+     display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3rem;
+    }
+    }
+    .servicio{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  }
+  .servicio p{
+   line-height: 2;
+   text-align: center;
+   font-size: 2.5rem;
+  }
+  
+  .servicio .icono{
+   height: 10rem;
+   width: 10rem;
+   background-color: var(--ToastedCaramel);
+   border-radius: 50%;
+   display:flex ;
+  justify-content: center;
+   align-items: center   ;
+  }
+
+
+
+   .formulario{
+
+   background-color:var(--ToastedCaramel);
+   width: min(60rem,100%);
+   margin: 0 auto;
+   padding: 2rem;
+   border-radius: 1rem;
+   font-size: 2rem;
+  }
+  .formulario fieldset{
+   border: none;
+  }
+  .formulario legend{
+   text-align: center;
+   font-size: 2rem;
+   text-transform: uppercase;
+   font-weight: 700;
+   margin-bottom: 2rem;
+  }
+  .campo{
+   margin: 1rem;
+   }
+
+   .campo label{
+      color: var(--Vanilla);
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      display: block;
+   }
+   
+   .campo textarea{
+      height: 20rem;
+   }
+    .input-text{
+      width: 100%;
+      border: none;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+   }
+
+   .enviar .boton{
+      width: 100%;
+      color: var(--Vanilla);
+   }
+     footer p{
+      text-align: center;
+   }
+
+   .Historia{
+    text-align: center;
+    font-size: 2rem;
+   }
+   .Historia p{
+    text-align: center;
+    line-height: 2;
+    color: var(--Darkcoffe);
+   }
+   .Historia .icono{
+    height: 10rem;
+    width: 10rem;
+    background-color: var(--ToastedCaramel);
+    border-radius: 50%;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .Preguntas-y-Respuestas{
+    background-color:var(--Burgundy);
+   width: min(60rem,100%);
+   margin: 0 auto;
+   padding: 2rem;
+   border-radius: 1rem;
+   }
+
+   .Preguntas-y-Respuestas fieldset{
+    border:none;
+   }
+  
+   .JarabeVainilla p{
+    font-size: 3rem;
+   }
+
+
+    
+    .Opiniones{
+        text-align: center;
+        font-size: 2rem;
+    }
+
+
+   
+
+.tarjeta-producto {
+    background-color: var(--Blanco);
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    text-align: center; 
+}
+
+.tarjeta-producto h2 {
+    color: var(--Darkcoffe);
+    margin-bottom: 1.5rem;
+}
+
+
+.contenido-producto {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    text-align: left; 
+}
+
+.contenido-producto img {
+    width: 45%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.detalles-producto .precio {
+    font-weight: bold;
+    color: var(--SpicedWine); 
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+    
+
+
+   
